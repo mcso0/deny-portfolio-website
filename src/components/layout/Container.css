@@ -8,7 +8,7 @@
   min-height: 100vh;
   
   /* 고정 네비게이션을 위한 상단 여백 */
-  padding-top: 112px; /* Navigation 64px + 상단여백 24px + 추가여백 24px */
+  padding-top: 64px; /* Navigation 64px */
   
   /* 전체 레이아웃 구조 */
   display: flex;

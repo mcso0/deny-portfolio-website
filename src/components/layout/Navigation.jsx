@@ -13,10 +13,8 @@ const Navigation = () => {
   // 스크롤 감지 Hook 사용
   const { isScrolled } = useScrollPosition();
 
-  // 스크롤 상태에 따른 메뉴 항목 변경 (Figma 기준)
-  const menuItems = isScrolled 
-    ? ["Intro", "About", "Project", "Teamwork", "Contact"] // 스크롤 후: 5개 항목
-    : ["Intro", "Project", "About", "Contact"]; // 초기: 4개 항목
+  // 메뉴 항목은 항상 동일하게 유지
+  const menuItems = ["Intro", "Project", "About", "Contact"];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

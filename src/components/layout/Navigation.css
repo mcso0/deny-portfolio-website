@@ -8,14 +8,22 @@
   justify-content: space-between;
   padding: 0 var(--container-padding);
   position: fixed; /* 고정 위치 */
-  top: 24px; /* 상단에서 24px 여백 (Figma 기준) */
+  top: 0; /* 초기: 화면 최상단에 붙어있음 */
+  left: 0;
+  right: 0;
+  width: 100%; /* 초기: 전체 너비 */
+  z-index: 1000; /* 다른 요소들 위에 표시 */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* 부드러운 애니메이션 */
+}
+
+/* 스크롤 후 상태 - Figma 기준 */
+.navigation.scrolled {
+  top: 24px; /* 상단에서 24px 여백 */
   left: 50%;
   transform: translateX(-50%); /* 중앙 정렬 */
-  width: 924px; /* 초기 너비 (Figma 기준) */
+  width: 924px; /* Figma 기준 너비 */
   max-width: calc(100% - 48px); /* 모바일에서 좌우 여백 */
   border-radius: var(--nav-border-radius); /* 32px */
-  z-index: 1000; /* 다른 요소들 위에 표시 */
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* 부드러운 애니메이션 */
   
   /* Figma 기준 그라디언트 테두리 */
   border: 1px solid transparent;
@@ -25,11 +33,6 @@
       rgba(165, 165, 165, 1) 0%, 
       rgba(64, 64, 64, 1) 100%
     ) border-box;
-}
-
-/* 스크롤 후 상태 - Figma 기준 640px */
-.navigation.scrolled {
-  width: 640px; /* 스크롤 후 너비 (Figma 기준) */
 }
 
 /* 로고 영역 */
@@ -55,12 +58,6 @@
   display: flex;
   gap: 32px;
   align-items: center;
-  transition: gap 0.3s ease; /* 부드러운 간격 변화 */
-}
-
-/* 스크롤 후 메뉴 간격 조정 (더 많은 항목을 위해) */
-.navigation.scrolled .nav-menu-desktop {
-  gap: 24px; /* 좀 더 타이트한 간격 */
 } /* 네비게이션 아이템 */
 .nav-item {
   background: none;
