@@ -1,0 +1,24 @@
+/* 📂 Contents Section 스타일 - Figma 기준 폴더 형태 */
+
+.contents-section {
+  padding: var(--spacing-section-gap) 0;
+}
+
+/* 프로젝트 폴더 - 모바일 기준 */
+.project-folder {
+  background: transparent;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-section-gap); /* 24px */
+}
+
+/* 패드 이상 (415px~): 폴더 형태로 변경 */
+@media (min-width: 415px) {
+  .project-folder {
+    background: var(--container-gray);
+    border-radius: var(--folder-border-radius); /* 99px */
+    padding: 49.5px; /* Figma 측정값 */
+    display: block; /* 겹침 효과를 위해 block으로 변경 */
+  }
+}

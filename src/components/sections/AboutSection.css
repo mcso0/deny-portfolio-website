@@ -1,0 +1,75 @@
+/* 👤 About Section 스타일 - Figma 기준 반응형 레이아웃 */
+
+.about-section {
+  padding: var(--spacing-section-gap) 0;
+}
+
+/* 모바일: 1열 구조 */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-section-gap); /* 24px */
+  height: auto;
+}
+
+/* 프로필 영역 */
+.profile-area {
+  background: var(--profile-bg); /* rgba(255, 255, 255, 0.1) */
+  border-radius: var(--card-border-radius);
+  padding: 24px;
+  height: 253px; /* 모바일 Figma 측정값 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-placeholder {
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: 16px;
+}
+
+/* 텍스트 영역 */
+.about-text-area {
+  padding: 24px 0;
+  height: 440px; /* 모바일 Figma 측정값 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-title {
+  font-size: 32px;
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.about-text {
+  font-family: var(--font-family);
+  font-size: var(--about-font-size); /* 모바일 18px, 데스크톱 24px */
+  line-height: var(--about-line-height);
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.about-text:last-child {
+  margin-bottom: 0;
+}
+
+/* PC (1021px 이상): 2열 구조 */
+@media (min-width: 1021px) {
+  .about-container {
+    grid-template-columns: 1fr 1fr;
+    height: 483px; /* PC Figma 측정값 */
+  }
+  
+  .profile-area {
+    height: 100%;
+  }
+  
+  .about-text-area {
+    height: 100%;
+    padding: 24px;
+  }
+}

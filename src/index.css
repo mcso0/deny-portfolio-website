@@ -1,0 +1,210 @@
+/* 🎨 이승욱 포트폴리오 - CSS 디자인 시스템 */
+/* Figma 디자인 100% 기준 - 픽셀 퍼펙트 구현 */
+
+/* 폰트 로딩 (Inter) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/* CSS 초기화 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* 🎨 CSS 변수 시스템 (Figma 기준) */
+:root {
+  /* === 색상 팔레트 (Figma 정확한 값) === */
+  --bg-primary: #171717;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.5);
+  
+  /* 프로젝트 카드 색상 */
+  --project-purple: #853b7c;
+  --project-teal: #34b69c;
+  --project-red: #b23939;
+  --project-brown: #604646;
+  
+  /* 컨테이너 색상 */
+  --container-gray: #272727;
+  --contact-bg: #ffffff;
+  --contact-text: #000000;
+  --profile-bg: rgba(255, 255, 255, 0.1);
+
+  /* === 폰트 시스템 === */
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-regular: 400;
+  --font-bold: 700;
+
+  /* === Mobile-First 반응형 값 (모바일 414px 기준) === */
+  --grid-columns: 2;
+  --container-max-width: 366px;
+  --container-padding: 24px;
+  --grid-gap: 24px;
+
+  /* Hero 타이포그래피 (모바일) */
+  --hero-font-size: 80px;
+  --hero-line-height: 80px;
+  
+  /* About 타이포그래피 (모바일) */
+  --about-font-size: 18px;
+  --about-line-height: 21.78px;
+
+  /* 컴포넌트 크기 */
+  --header-height: 64px;
+  --nav-border-radius: 32px;
+  --card-border-radius: 16px;
+  --folder-border-radius: 99px;
+  --chatbot-size: 63px;
+
+  /* 간격 시스템 (Figma 측정값) */
+  --spacing-hero-top: 48px;
+  --spacing-section-gap: 24px;
+}
+
+/* === 패드 (415px ~ 1020px) === */
+@media (min-width: 415px) and (max-width: 1020px) {
+  :root {
+    --grid-columns: 6;
+    --container-max-width: 972px;
+    
+    /* Hero 타이포그래피 (패드) */
+    --hero-font-size: 160px;
+    --hero-line-height: 160px;
+    
+    /* About 타이포그래피 (패드) */
+    --about-font-size: 24px;
+    --about-line-height: 29.05px;
+
+    /* 컴포넌트 크기 조정 */
+    --card-border-radius: 40px;
+    --chatbot-size: 48px;
+    
+    /* 간격 조정 */
+    --spacing-hero-top: 88px;
+  }
+}
+
+/* === PC (1021px 이상) === */
+@media (min-width: 1021px) {
+  :root {
+    --grid-columns: 12;
+    --container-max-width: 1240px;
+    --container-padding: 24px; /* PC에서도 기본 24px 패딩 */
+    
+    /* Hero 타이포그래피 (PC) */
+    --hero-font-size: 160px;
+    --hero-line-height: 160px;
+    
+    /* About 타이포그래피 (PC) */
+    --about-font-size: 24px;
+    --about-line-height: 29.05px;
+
+    /* 컴포넌트 크기 */
+    --card-border-radius: 40px;
+    --chatbot-size: 48px;
+    
+    /* 간격 */
+    --spacing-hero-top: 88px;
+  }
+}
+
+/* === 풀스크린 데스크톱 (1920px 이상) === */
+@media (min-width: 1920px) {
+  :root {
+    --container-padding: 0; /* 1920px에서만 좌우 340px 자동 여백 */
+  }
+}
+
+/* === 기본 레이아웃 === */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* === 유틸리티 클래스 === */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: var(--grid-gap);
+}
+
+/* === 반응형 타이포그래피 === */
+.hero-title {
+  font-family: var(--font-family);
+  font-weight: var(--font-regular);
+  font-size: var(--hero-font-size);
+  line-height: var(--hero-line-height);
+  letter-spacing: -0.02em;
+}
+
+.about-text {
+  font-family: var(--font-family);
+  font-weight: var(--font-regular);
+  font-size: var(--about-font-size);
+  line-height: var(--about-line-height);
+}
+
+.navigation-text {
+  font-size: 12px;
+  line-height: 14.52px;
+}
+
+.tab-text {
+  font-size: 14px;
+  line-height: 16.94px;
+}
+
+.contact-title {
+  font-size: 48px;
+  line-height: 58.09px;
+}
+
+.footer-text {
+  font-size: 16px;
+  line-height: 19.36px;
+}
+
+/* === 애니메이션 === */
+.transition-smooth {
+  transition: all 0.3s ease;
+}
+
+.transition-fast {
+  transition: all 0.2s ease;
+}
+
+/* === 스크롤바 스타일링 === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--container-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}

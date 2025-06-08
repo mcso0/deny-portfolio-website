@@ -1,0 +1,89 @@
+/* 🤖 ChatBot 스타일 - Figma 기준 플로팅 버튼 */
+
+.chatbot-button {
+  position: fixed;
+  bottom: 24px; /* Figma 측정값 */
+  right: 24px; /* Figma 측정값 */
+  width: var(--chatbot-size); /* 모바일 63px, 데스크톱 48px */
+  height: var(--chatbot-size);
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.chatbot-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* 챗봇 아이콘 이미지 */
+.chatbot-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 챗봇 모달 */
+.chatbot-modal {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  width: 320px;
+  height: 400px;
+  background: var(--bg-primary);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbot-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-header h3 {
+  color: var(--text-primary);
+  font-size: 16px;
+  margin: 0;
+}
+
+.chatbot-close {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-content {
+  padding: 20px;
+  flex: 1;
+  color: var(--text-primary);
+}
+
+/* 모바일 (414px 이하)에서 모달 크기 조정 */
+@media (max-width: 414px) {
+  .chatbot-modal {
+    width: calc(100vw - 48px);
+    right: 24px;
+    left: 24px;
+  }
+}

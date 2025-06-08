@@ -1,0 +1,54 @@
+/* 🔗 Footer 스타일 - Figma 기준 255px 높이 */
+
+.footer {
+  height: 255px; /* Figma 측정값 */
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--container-padding);
+}
+
+.footer-content {
+  width: 100%;
+  max-width: var(--container-max-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+
+/* 사이트맵 2열 구조 */
+.sitemap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.sitemap-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--text-primary);
+}
+
+/* 카피라이트 */
+.footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom .footer-text {
+  color: var(--text-secondary);
+  margin: 0;
+}

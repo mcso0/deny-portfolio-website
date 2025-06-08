@@ -1,0 +1,67 @@
+/* 🎯 Hero Section 스타일 - Figma 기준 반응형 타이포그래피 */
+
+.hero-section {
+  padding-top: var(--spacing-hero-top); /* 모바일 48px, 패드 88px */
+  padding-bottom: var(--spacing-section-gap);
+}
+
+/* 탭 영역 */
+.hero-tabs {
+  display: flex;
+  gap: 8px; /* 모든 디바이스 8px 통일 */
+  margin-bottom: 16px;
+  overflow-x: auto; /* 모바일에서 스크롤 가능 */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
+}
+
+.hero-tabs::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* 탭 아이템 */
+.tab-item {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.tab-item.active {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tab-item.inactive {
+  color: var(--text-secondary);
+}
+
+.tab-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 메인 타이포그래피 */
+.hero-title {
+  font-family: var(--font-family);
+  font-weight: var(--font-regular);
+  font-size: var(--hero-font-size); /* 모바일 80px, 패드/데스크톱 160px */
+  line-height: var(--hero-line-height);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.hero-line {
+  display: block;
+}
+
+/* 패드 이상 (415px~)에서 탭 간격 조정 */
+@media (min-width: 415px) {
+  .hero-tabs {
+    gap: 8px; /* 모든 디바이스 8px 통일 */
+    margin-bottom: 24px;
+  }
+}

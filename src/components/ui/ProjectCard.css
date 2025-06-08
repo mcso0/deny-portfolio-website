@@ -1,0 +1,73 @@
+/* 📁 Project Card 스타일 - Figma 기준 겹침 효과 */
+
+.project-card {
+  border-radius: var(--card-border-radius);
+  padding: 24px;
+  position: relative;
+  min-height: 209px; /* 모바일 기준 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+/* 카드 색상 변형 */
+.project-card.purple {
+  background: var(--project-purple);
+}
+
+.project-card.teal {
+  background: var(--project-teal);
+}
+
+.project-card.red {
+  background: var(--project-red);
+}
+
+.project-card.brown {
+  background: var(--project-brown);
+}
+
+/* 프로젝트 제목 */
+.project-title {
+  font-size: 24px;
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+}
+
+/* 프로젝트 설명 */
+.project-description {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 프로젝트 이미지 */
+.project-image {
+  margin-top: 16px;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 호버 효과 */
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+/* 패드 이상 (415px~)에서 겹침 효과 */
+@media (min-width: 415px) {
+  .project-card {
+    margin-bottom: -55px; /* 겹치는 효과 */
+    min-height: 280px; /* 패드/PC에서 더 높게 */
+  }
+  
+  .project-card:last-child {
+    margin-bottom: 0; /* 마지막 카드는 겹침 없음 */
+  }
+}

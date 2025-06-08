@@ -1,0 +1,139 @@
+/* 🧭 Navigation 스타일 - Figma 64px 높이, 32px border-radius */
+
+.navigation {
+  height: var(--header-height); /* 64px */
+  border-radius: var(--nav-border-radius); /* 32px */
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--container-padding);
+  position: fixed; /* 고정 위치 */
+  top: 24px; /* 상단에서 24px 여백 */
+  left: 50%; /* 가로 중앙 정렬을 위한 시작점 */
+  transform: translateX(-50%); /* 정확한 중앙 정렬 */
+  width: calc(100% - 48px); /* 좌우 24px씩 여백 */
+  max-width: var(--container-max-width); /* 최대 너비 제한 */
+  z-index: 1000; /* 다른 요소들 위에 표시 */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+/* 로고 영역 */
+.nav-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.logo-image:hover {
+  opacity: 0.8;
+}
+
+/* 데스크톱/패드 메뉴 */
+.nav-menu-desktop {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+} /* 네비게이션 아이템 */
+.nav-item {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-item.active {
+  color: var(--text-primary);
+}
+
+.nav-item:hover {
+  color: var(--text-primary);
+}
+
+/* 설정 버튼 */
+.settings-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.settings-btn:hover {
+  border-color: var(--text-secondary);
+}
+
+/* 햄버거 메뉴 (모바일) */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger-menu span {
+  width: 24px;
+  height: 2px;
+  background: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+/* 모바일 메뉴 드롭다운 */
+.nav-menu-mobile {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-primary);
+  border-radius: 0 0 var(--nav-border-radius) var(--nav-border-radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav-item-mobile {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 12px 0;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.nav-item-mobile.active {
+  color: var(--text-primary);
+}
+
+.nav-item-mobile:hover {
+  color: var(--text-primary);
+}
+
+/* 모바일 (414px 이하)에서 햄버거 메뉴 표시 */
+@media (max-width: 414px) {
+  .nav-menu-desktop {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .settings-btn {
+    display: none;
+  }
+}

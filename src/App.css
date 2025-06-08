@@ -1,0 +1,21 @@
+/* 🏁 App 스타일 - 메인 애플리케이션 */
+
+.App {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+/* 스크롤 스무딩 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 섹션 스크롤 위치 조정 (Navigation 높이 고려) */
+section[id] {
+  scroll-margin-top: 80px; /* Navigation 64px + 여유분 16px */
+}
+
+/* 전체 앱 애니메이션 */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}

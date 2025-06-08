@@ -1,0 +1,21 @@
+/* 🏗️ Container 스타일 - Figma 기준 픽셀 퍼펙트 */
+
+.main-container {
+  /* Mobile-First: 366px 기준 */
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  min-height: 100vh;
+  
+  /* 고정 네비게이션을 위한 상단 여백 */
+  padding-top: 112px; /* Navigation 64px + 상단여백 24px + 추가여백 24px */
+  
+  /* 전체 레이아웃 구조 */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 섹션 간 기본 간격 */
+.main-container > * + * {
+  margin-top: var(--spacing-section-gap);
+}
