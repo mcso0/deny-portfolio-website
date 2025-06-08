@@ -1,14 +1,22 @@
 // 🧭 Navigation - 반응형 네비게이션
 // Figma 기준: 64px 높이, 32px border-radius, 햄버거 메뉴(모바일)
+// 스크롤 인터랙션: 924px → 640px 너비 변화
 
 import { useState } from "react";
 import "./Navigation.css";
+import useScrollPosition from "../../hooks/useScrollPosition";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("Intro");
+  
+  // 스크롤 감지 Hook 사용
+  const { isScrolled } = useScrollPosition();
 
-  const menuItems = ["Intro", "Projects", "About", "Contact"];
+  // 스크롤 상태에 따른 메뉴 항목 변경 (Figma 기준)
+  const menuItems = isScrolled 
+    ? ["Intro", "About", "Project", "Teamwork", "Contact"] // 스크롤 후: 5개 항목
+    : ["Intro", "Project", "About", "Contact"]; // 초기: 4개 항목
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -32,7 +40,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="navigation">
+    <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       {/* 로고 영역 */}
       <div className="nav-logo">
         <img 

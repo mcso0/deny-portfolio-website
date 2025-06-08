@@ -12,7 +12,7 @@ html {
 
 /* 섹션 스크롤 위치 조정 (고정 Navigation 고려) */
 section[id] {
-  scroll-margin-top: 120px; /* Navigation 64px + 상단여백 24px + 추가여백 32px */
+  scroll-margin-top: 80px; /* Navigation 64px + 여유분 16px */
 }
 
 /* 전체 앱 애니메이션 */
