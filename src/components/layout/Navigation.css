@@ -9,9 +9,11 @@
   padding: 0 var(--container-padding);
   position: fixed; /* 고정 위치 */
   top: 0; /* 초기: 화면 최상단에 붙어있음 */
-  left: 0;
-  right: 0;
+  left: 50%; /* 초기부터 중앙 기준점 */
+  transform: translateX(-50%); /* 초기부터 중앙 정렬 */
   width: 100%; /* 초기: 전체 너비 */
+  max-width: calc(100% - 48px); /* 모바일 대응 */
+  border-radius: var(--nav-border-radius); /* 32px - 애니메이션 자연스럽게 */
   z-index: 1000; /* 다른 요소들 위에 표시 */
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* 부드러운 애니메이션 */
 }
@@ -19,11 +21,7 @@
 /* 스크롤 후 상태 - Figma 기준 */
 .navigation.scrolled {
   top: 24px; /* 상단에서 24px 여백 */
-  left: 50%;
-  transform: translateX(-50%); /* 중앙 정렬 */
-  width: 924px; /* Figma 기준 너비 */
-  max-width: calc(100% - 48px); /* 모바일에서 좌우 여백 */
-  border-radius: var(--nav-border-radius); /* 32px */
+  width: 924px; /* Figma 기준 너비 (100% → 924px로 변경) */
   
   /* Figma 기준 그라디언트 테두리 */
   border: 1px solid transparent;

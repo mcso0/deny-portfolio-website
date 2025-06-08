@@ -9,7 +9,7 @@ import useScrollPosition from "../../hooks/useScrollPosition";
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("Intro");
-  
+
   // 스크롤 감지 Hook 사용
   const { isScrolled } = useScrollPosition();
 
@@ -21,29 +21,29 @@ const Navigation = () => {
   };
 
   // 부드러운 스크롤 함수
-  const scrollToSection = (sectionName) => {
+  const scrollToSection = sectionName => {
     const sectionId = sectionName.toLowerCase();
     const element = document.getElementById(sectionId);
-    
+
     if (element) {
       element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-        inline: 'nearest'
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
       });
-      
+
       // 활성 탭 업데이트
       setActiveTab(sectionName);
     }
   };
 
   return (
-    <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navigation ${isScrolled ? "scrolled" : ""}`}>
       {/* 로고 영역 */}
       <div className="nav-logo">
-        <img 
-          src="/assets/logos/Logo container-1.png" 
-          alt="웹사이트 로고이미지" 
+        <img
+          src="/assets/logos/Logo container-1.png"
+          alt="웹사이트 로고이미지"
           className="logo-image"
         />
       </div>
