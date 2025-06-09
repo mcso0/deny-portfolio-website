@@ -54,8 +54,8 @@ body {
   --grid-gap: 24px;
 
   /* Hero 타이포그래피 (모바일) */
-  --hero-font-size: 40px;
-  --hero-line-height: 44px;
+  --hero-font-size: 48px;
+  --hero-line-height: 52px;
 
   /* About 타이포그래피 (모바일) */
   --about-font-size: 18px;
@@ -66,7 +66,7 @@ body {
   --nav-border-radius: 32px;
   --card-border-radius: 16px;
   --folder-border-radius: 99px;
-  --chatbot-size: 63px;
+  --chatbot-size: 48px;
 
   /* 간격 시스템 (Figma 측정값) */
   --spacing-hero-top: 80px; /* 모바일: Navigation 이후 72px */

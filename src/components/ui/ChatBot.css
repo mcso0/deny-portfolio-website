@@ -4,7 +4,7 @@
   position: fixed;
   bottom: 24px; /* Figma 측정값 */
   right: 24px; /* Figma 측정값 */
-  width: var(--chatbot-size); /* 모바일 63px, 데스크톱 48px */
+  width: var(--chatbot-size); /* 모든 화면에서 48px */
   height: var(--chatbot-size);
   background: transparent;
   border: none;
