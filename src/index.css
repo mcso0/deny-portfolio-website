@@ -38,7 +38,7 @@ body {
 
   /* 컨테이너 색상 */
   --container-gray: #272727;
-  --contact-bg: #ffffff;
+  --contact-bg: transparent;
   --contact-text: #000000;
   --profile-bg: rgba(255, 255, 255, 0.1);
 
@@ -54,8 +54,8 @@ body {
   --grid-gap: 24px;
 
   /* Hero 타이포그래피 (모바일) */
-  --hero-font-size: 80px;
-  --hero-line-height: 80px;
+  --hero-font-size: 40px;
+  --hero-line-height: 44px;
 
   /* About 타이포그래피 (모바일) */
   --about-font-size: 18px;
@@ -80,8 +80,8 @@ body {
     --container-max-width: 972px;
 
     /* Hero 타이포그래피 (패드) */
-    --hero-font-size: 160px;
-    --hero-line-height: 160px;
+    --hero-font-size: 64px;
+    --hero-line-height: 68px;
 
     /* About 타이포그래피 (패드) */
     --about-font-size: 24px;
@@ -105,8 +105,8 @@ body {
     --container-padding: 24px; /* PC에서도 기본 24px 패딩 */
 
     /* Hero 타이포그래피 (PC) */
-    --hero-font-size: 160px;
-    --hero-line-height: 160px;
+    --hero-font-size: 72px;
+    --hero-line-height: 76px;
 
     /* About 타이포그래피 (PC) */
     --about-font-size: 24px;

@@ -1,7 +1,7 @@
 /* 📞 Contact Section 스타일 - Figma 기준 흰색 배경 */
 
 .contact-section {
-  background: var(--contact-bg); /* #ffffff */
+  background: var(--bg-primary); /* 다른 섹션과 동일한 어두운 배경 */
   height: 248px; /* 모바일 Figma 측정값 */
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@
   font-size: 48px; /* Figma 측정값 */
   line-height: 58.09px; /* Figma 측정값 */
   font-weight: var(--font-bold);
-  color: var(--contact-text); /* #000000 */
+  color: var(--text-primary); /* 어두운 배경에 맞는 흰색 텍스트 */
   margin-bottom: 24px;
 }
 
@@ -31,7 +31,7 @@
 .contact-text {
   font-size: 18px;
   line-height: 1.6;
-  color: var(--contact-text);
+  color: var(--text-primary); /* 어두운 배경에 맞는 흰색 텍스트 */
   margin: 0;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .contact-link {
-  color: var(--contact-text);
+  color: var(--text-primary); /* 어두운 배경에 맞는 흰색 텍스트 */
   text-decoration: none;
   font-size: 16px;
   font-weight: var(--font-regular);
