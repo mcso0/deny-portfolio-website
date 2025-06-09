@@ -1,8 +1,8 @@
 /* 🎨 이승욱 포트폴리오 - CSS 디자인 시스템 */
 /* Figma 디자인 100% 기준 - 픽셀 퍼펙트 구현 */
 
-/* 폰트 로딩 (Inter) */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+/* 폰트 로딩 (Pretendard) */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 /* CSS 초기화 */
 * {
@@ -14,7 +14,7 @@
 html,
 body {
   height: 100%;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -43,7 +43,7 @@ body {
   --profile-bg: rgba(255, 255, 255, 0.1);
 
   /* === 폰트 시스템 === */
-  --font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-regular: 400;
   --font-bold: 700;
 
@@ -80,8 +80,8 @@ body {
     --container-max-width: 972px;
 
     /* Hero 타이포그래피 (패드) */
-    --hero-font-size: 64px;
-    --hero-line-height: 68px;
+    --hero-font-size: 100px;
+    --hero-line-height: 108px;
 
     /* About 타이포그래피 (패드) */
     --about-font-size: 24px;
@@ -105,8 +105,8 @@ body {
     --container-padding: 24px; /* PC에서도 기본 24px 패딩 */
 
     /* Hero 타이포그래피 (PC) */
-    --hero-font-size: 72px;
-    --hero-line-height: 76px;
+    --hero-font-size: 140px;
+    --hero-line-height: 145px;
 
     /* About 타이포그래피 (PC) */
     --about-font-size: 24px;
@@ -210,4 +210,10 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-secondary);
+}
+
+/* 텍스트 선택 색상 */
+::selection {
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(0, 0, 0, 1);
 }
