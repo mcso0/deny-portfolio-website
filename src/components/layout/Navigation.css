@@ -141,12 +141,15 @@
 /* 모바일 (414px 이하)에서 햄버거 메뉴 표시 */
 @media (max-width: 414px) {
   .navigation {
-    width: calc(100% - 48px); /* 모바일에서 전체 너비 사용 */
+    width: 100%; /* 모바일: 화면 전체 너비 (edge-to-edge) */
     max-width: none;
+    padding: 0 16px; /* 내부 컨텐츠만 16px 패딩 */
   }
 
   .navigation.scrolled {
-    width: calc(100% - 48px); /* 스크롤 후에도 동일 */
+    width: 100%; /* 스크롤 후에도 전체 너비 */
+    padding: 0 16px; /* 내부 컨텐츠 패딩 유지 */
+    top: 16px; /* 모바일에서 상단 여백 16px로 조정 */
   }
 
   .nav-menu-desktop {

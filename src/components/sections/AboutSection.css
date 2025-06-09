@@ -14,7 +14,6 @@
 
 /* 프로필 영역 */
 .profile-area {
-  background: var(--profile-bg); /* rgba(255, 255, 255, 0.1) */
   border-radius: var(--card-border-radius);
   padding: 24px;
   height: 253px; /* 모바일 Figma 측정값 */
@@ -27,6 +26,15 @@
   color: var(--text-secondary);
   text-align: center;
   font-size: 16px;
+}
+
+/* 프로필 이미지 스타일 */
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; /* 원형으로 만들기 */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* 텍스트 영역 */
@@ -63,11 +71,11 @@
     grid-template-columns: 1fr 1fr;
     height: 483px; /* PC Figma 측정값 */
   }
-  
+
   .profile-area {
     height: 100%;
   }
-  
+
   .about-text-area {
     height: 100%;
     padding: 24px;
