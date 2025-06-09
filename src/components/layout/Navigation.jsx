@@ -40,7 +40,7 @@ const Navigation = () => {
   return (
     <nav className={`navigation ${isScrolled ? "scrolled" : ""}`}>
       {/* 로고 영역 */}
-      <div className="nav-logo">
+      <div className="nav-logo" onClick={() => scrollToSection("Intro")}>
         <img
           src="/assets/logos/Logo container-1.png"
           alt="웹사이트 로고이미지"
