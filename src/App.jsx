@@ -20,11 +20,11 @@ import ChatBot from './components/ui/ChatBot';
 function App() {
   return (
     <>
+      {/* Navigation (Fixed 위치) */}
+      <Navigation />
+      
       {/* 메인 컨테이너 */}
-      <Container>
-        {/* Navigation */}
-        <Navigation />
-        
+      <Container>        
         {/* Hero Section */}
         <HeroSection />
         

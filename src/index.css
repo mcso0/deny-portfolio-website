@@ -69,8 +69,8 @@ body {
   --chatbot-size: 63px;
 
   /* 간격 시스템 (Figma 측정값) */
-  --spacing-hero-top: 24px;
-  --spacing-section-gap: 64px; /* 모바일: 더 촘촘하게 */
+  --spacing-hero-top: 80px; /* 모바일: Navigation 이후 72px */
+  --spacing-section-gap: 80px; /* 모바일: 더 촘촘하게 */
 }
 
 /* === 패드 (415px ~ 1020px) === */
@@ -92,8 +92,8 @@ body {
     --chatbot-size: 48px;
 
     /* 간격 조정 */
-    --spacing-hero-top: 24px;
-    --spacing-section-gap: 80px; /* 패드: 현재 유지 */
+    --spacing-hero-top: 120px; /* 패드: Navigation 이후 76px */
+    --spacing-section-gap: 120px; /* 패드: 현재 유지 */
   }
 }
 
@@ -117,8 +117,8 @@ body {
     --chatbot-size: 48px;
 
     /* 간격 */
-    --spacing-hero-top: 24px;
-    --spacing-section-gap: 80px; /* PC: 더 여유롭게 */
+    --spacing-hero-top: 120px; /* PC: Navigation 이후 40px */
+    --spacing-section-gap: 160px; /* PC: 더 여유롭게 */
   }
 }
 
